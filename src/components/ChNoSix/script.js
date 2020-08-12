@@ -48,6 +48,13 @@ function addData(obj) {
   updateDOM();
 }
 
+// Show Millioanaires in Arr
+function showMillionaires() {
+  data = data.filter((user) => user.money > 100000);
+
+  updateDOM();
+}
+
 // Update DOM
 function updateDOM(providedData = data) {
   // Clear main div
@@ -72,3 +79,4 @@ function formatMoney(number) {
 addUserBtn.addEventListener('click', getRandomUser);
 doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByRichest);
+showMillionairesBtn.addEventListener('click', showMillionaires);
